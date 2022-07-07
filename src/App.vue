@@ -1,7 +1,7 @@
 <script setup>
 import Elevator from './components/Elevator.vue';
 import { ELEVATORS_COUNT, FLOORS_COUNT } from './constants';
-import Buttons from './components/Buttons.vue';
+import Floors from './components/Floors.vue';
 </script>
 
 <script>
@@ -25,6 +25,6 @@ export default {
     <li v-for="(item, index) in elevatorsFloor">
       <Elevator :floors="FLOORS_COUNT" :floor=item />
     </li>
-    <Buttons :set-floor="setFloor" :floor-count="FLOORS_COUNT" :selected-floor="floor" />
+    <Floors :set-floor="setFloor" :floor-count="FLOORS_COUNT" :selected-floor="floor" />
   </main>
 </template>
